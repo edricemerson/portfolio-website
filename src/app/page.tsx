@@ -15,7 +15,6 @@ export default function Home() {
           </nav>
         </div>
 
-       
         <div className="mt-4 md:mt-0">
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition">
             Download CV
@@ -23,7 +22,6 @@ export default function Home() {
         </div>
       </header>
 
-     
       <section id="about-me" className="py-20 px-10 bg-gray-950">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-2">About Me</h2>
@@ -31,16 +29,16 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-          <div className="relative flex justify-center">
+          <div className="flex justify-center gap-8">
             <img
               src="/Images/Image1.jpg"
               alt="Profile 1"
-              className="w-48 h-48 object-cover rounded-2xl border-2 border-gray-700 shadow-md"
+              className="w-48 h-48 object-cover object-top rounded-2xl border-2 border-gray-700 shadow-md"
             />
             <img
               src="/Images/Image2.jpg"
               alt="Profile 2"
-              className="w-48 h-48 object-cover rounded-2xl border-2 border-gray-700 shadow-md absolute top-4 left-4 opacity-80"
+              className="w-48 h-48 object-cover object-top rounded-2xl border-2 border-gray-700 shadow-md"
             />
           </div>
 
@@ -54,7 +52,7 @@ export default function Home() {
             <p className="text-gray-300 leading-relaxed">
               A passionate computer science student with a strong foundation in programming and problem-solving.
               I thrive on challenges and enjoy creating innovative solutions through code. With a keen interest in
-              software development, I am constantly exploring new technologies and honing my skills to stay at the
+              software development, web development adn mobile programming, I am constantly exploring new technologies and honing my skills to stay at the
               forefront of the ever-evolving tech landscape. My goal is to contribute to impactful projects that make
               a difference in the world.
             </p>
@@ -84,7 +82,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EDUCATION SECTION */}
       <section id="education" className="py-20 px-10 bg-gray-900">
         <h2 className="text-4xl font-bold text-center mb-10">Education</h2>
         <div className="max-w-3xl mx-auto">
@@ -98,7 +95,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EXPERIENCE SECTION */}
       <section id="experience" className="py-20 px-10 bg-gray-950">
         <h2 className="text-4xl font-bold text-center mb-10">Experience</h2>
         <div className="max-w-3xl mx-auto">
@@ -111,11 +107,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS SECTION */}
       <section id="projects" className="py-20 px-10 bg-gray-900">
         <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Example Project Card */}
           <div className="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-[1.02] transition">
             <h3 className="text-xl font-semibold mb-2">Portfolio Website</h3>
             <p className="text-gray-400 mb-4">Built with Next.js and Tailwind CSS</p>
@@ -129,23 +123,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
-      <footer id="contact" className="py-10 bg-gray-950 text-center border-t border-gray-800">
+      <footer
+        id="contact"
+        className="py-10 bg-gray-600 text-center border-t border-gray-800"
+      >
         <p className="text-gray-400">
           © {new Date().getFullYear()} Edric Emerson — All Rights Reserved
         </p>
-        <div className="flex justify-center gap-6 mt-4">
-          <a href="mailto:edric@example.com" className="text-blue-400 hover:text-blue-500">
-            Email
+
+        <div className="flex justify-center gap-8 mt-4 text-blue-400">
+          <a
+            href="mailto:edriceson@gmail.com"
+            className="flex items-center gap-2 group transition"
+          >
+            <span className="group-hover:text-blue-500 transition">Email</span>
+            <img
+              src="/Images/email.png"
+              alt="Email Logo"
+              className="w-5 h-5 object-contain transition filter group-hover:py-0.25"
+            />
           </a>
-          <a href="https://github.com/yourusername" target="_blank" className="text-blue-400 hover:text-blue-500">
-            GitHub
+
+          <a
+            href="https://github.com/edricemerson"
+            target="_blank"
+            className="flex items-center gap-2 group transition"
+          >
+            <span className="group-hover:text-blue-500 transition">GitHub</span>
+            <img
+              src="/Images/github.png"
+              alt="GitHub Logo"
+              className="w-5 h-5 object-contain transition filter group-hover:py-0.25"
+            />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" className="text-blue-400 hover:text-blue-500">
-            LinkedIn
+
+          <a
+            href="https://linkedin.com/in/edric-emerson"
+            target="_blank"
+            className="flex items-center gap-2 group transition"
+          >
+            <span className="group-hover:text-blue-500 transition">LinkedIn</span>
+            <img
+              src="/Images/linkedin.png"
+              alt="LinkedIn Logo"
+              className="w-5 h-5 object-contain transition filter group-hover:py-0.25"
+            />
           </a>
         </div>
       </footer>
+
+
     </main>
   );
 }
