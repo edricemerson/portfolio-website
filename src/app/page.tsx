@@ -1,16 +1,16 @@
 export default function Home() {
   return (
-    <main className="bg-gray-950 text-white min-h-screen flex flex-col">
-      <header className="flex flex-wrap justify-between items-center px-10 py-6 bg-gray-900 shadow-md">
+    <main className="bg-gray-600 text-white min-h-screen flex flex-col">
+      <header className="flex flex-wrap justify-between items-center px-10 py-6 bg-gray-600 shadow-md">
         <div className="flex flex-col items-start">
-          <p className="italic text-gray-300 text-sm mb-2">
+          <p className="italic text-gray-300 text-2xl mb-4 font-bold">
             "Committed to learning, solving and innovating for a better Tomorrow"
           </p>
-          <nav className="flex flex-wrap gap-6 text-gray-200">
+          <nav className="flex flex-wrap gap-6 text-gray-200 bg-gray-950 px-4 py-2 rounded-lg">
             <a href="#about-me" className="hover:text-blue-400 transition">About Me</a>
-            <a href="#projects" className="hover:text-blue-400 transition">Projects</a>
-            <a href="#experience" className="hover:text-blue-400 transition">Experience</a>
             <a href="#education" className="hover:text-blue-400 transition">Education</a>
+            <a href="#experience" className="hover:text-blue-400 transition">Experience</a>
+            <a href="#projects" className="hover:text-blue-400 transition">Projects</a>
             <a href="#contact" className="hover:text-blue-400 transition">Contact</a>
           </nav>
         </div>
@@ -50,11 +50,10 @@ export default function Home() {
             </div>
 
             <p className="text-gray-300 leading-relaxed">
-              A passionate computer science student with a strong foundation in programming and problem-solving.
-              I thrive on challenges and enjoy creating innovative solutions through code. With a keen interest in
-              software development, web development adn mobile programming, I am constantly exploring new technologies and honing my skills to stay at the
-              forefront of the ever-evolving tech landscape. My goal is to contribute to impactful projects that make
-              a difference in the world.
+             I am a passionate Computer Science student with a strong foundation in programming and problem-solving. 
+             Currently pursuing the Database Specialist track, I have a deep interest in software, web, and mobile development.
+             I'm constantly exploring new technologies and refining my skills to stay ahead in the ever-evolving tech landscape. 
+             My goal is to contribute to meaningful projects that create real-world impact.
             </p>
 
             <div className="mt-8">
@@ -84,16 +83,35 @@ export default function Home() {
 
       <section id="education" className="py-20 px-10 bg-gray-900">
         <h2 className="text-4xl font-bold text-center mb-10">Education</h2>
-        <div className="max-w-3xl mx-auto">
-          <div className="border-l-4 border-blue-500 pl-6 space-y-6">
-            <div>
+        <div className="flex flex-col md:flex-row justify-center items-start gap-12 max-w-6xl mx-auto">
+          <div className="flex items-center gap-6 bg-gray-800 p-6 rounded-xl shadow-lg w-full md:w-1/2">
+            <img
+              src="/Images/kanaan.jpg"
+              alt="Kanaan School"
+              className=" h-32 object-contain rounded-lg border-2 border-gray-700"
+            />
+            <div className="border-l-4 border-blue-500 pl-4 space-y-6">
+              <h3 className="text-2xl font-semibold">Kanaan Global School</h3>
+              <p className="text-gray-400"> High School - Senior High School (Science Major)</p>
+              <p className="text-gray-500 text-sm">2016 - 2022</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-6 bg-gray-800 p-6 rounded-xl shadow-lg w-full md:w-1/2">
+            <img
+              src="/Images/binus.jpg"
+              alt="Bina Nusantara University"
+              className="h-32 object-contain rounded-lg border-2 border-gray-700"
+            />
+            <div className="border-l-4 border-blue-500 pl-4 space-y-2">
               <h3 className="text-2xl font-semibold">Bina Nusantara University</h3>
               <p className="text-gray-400">Bachelor of Computer Science</p>
-              <p className="text-gray-500 text-sm">2022 - Present</p>
+              <p className="text-gray-500 text-sm">2023 - {new Date().getFullYear()} (On Going)</p>
             </div>
           </div>
         </div>
       </section>
+
 
       <section id="experience" className="py-20 px-10 bg-gray-950">
         <h2 className="text-4xl font-bold text-center mb-10">Experience</h2>
@@ -128,7 +146,7 @@ export default function Home() {
         className="py-10 bg-gray-600 text-center border-t border-gray-800"
       >
         <p className="text-gray-400">
-          © {new Date().getFullYear()} Edric Emerson — All Rights Reserved
+          {new Date().getFullYear()} Edric Emerson — All Rights Reserved
         </p>
 
         <div className="flex justify-center gap-8 mt-4 text-blue-400">
