@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-          <div className="flex justify-center gap-8">
+          <div className="flex flex-col justify-center gap-8">
             <img
               src="/Images/Image1.jpg"
               alt="Profile 1"
@@ -151,7 +151,7 @@ export default function Home() {
 
         <div className="flex justify-center gap-8 mt-4 text-blue-400">
           <a
-            href="mailto:edriceson@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=edriceson@gmail.com"
             className="flex items-center gap-2 group transition"
           >
             <span className="group-hover:text-blue-500 transition">Email</span>
