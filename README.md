@@ -1,3 +1,8 @@
+# portofolio-website
+This is my **personal portfolio website** built with [Next.js](https://nextjs.org).  
+It showcases my background, projects, and technical skills in web development — including front-end design, database projects, and application development. 
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
