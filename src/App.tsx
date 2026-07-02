@@ -2,6 +2,7 @@ import './App.css'
 import { ShaderGradient,ShaderGradientCanvas } from '@shadergradient/react'
 import Navbar from './assets/page/Navbar'
 import About from './assets/page/About'
+import Experience from './assets/page/Experience'
 import Footer from './assets/page/Footer'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             <div className="relative z-10">
                 <Navbar />
                 <About />
+                <Experience />
                 <Footer />
             </div>
         </>
