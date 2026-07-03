@@ -3,6 +3,7 @@ import { ShaderGradient,ShaderGradientCanvas } from '@shadergradient/react'
 import Navbar from './assets/page/Navbar'
 import About from './assets/page/About'
 import Experience from './assets/page/Experience'
+import Education from './assets/page/Education'
 import Footer from './assets/page/Footer'
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
                 <Navbar />
                 <About />
                 <Experience />
+                <Education />
                 <Footer />
             </div>
         </>

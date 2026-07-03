@@ -72,7 +72,7 @@ function About() {
     const [showCard, setShowCard] = useState(false)
 
     return (
-        <div className="px-14">
+        <div id="about" className="px-14">
             <div className="mx-6 flex items-center mt-9 h-20">
                 <div className="flex flex-1 items-center">
                     <TypingAnimation
