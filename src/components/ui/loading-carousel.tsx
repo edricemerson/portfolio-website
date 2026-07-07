@@ -125,7 +125,7 @@ const aspectRatioClasses = {
   video: "aspect-video",
   square: "aspect-square",
   wide: "aspect-[2/1]",
-  short: "aspect-[3/1]",
+  short: "aspect-[4/5] sm:aspect-video md:aspect-[3/1]",
 }
 
 export function LoadingCarousel({

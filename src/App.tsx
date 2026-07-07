@@ -4,6 +4,7 @@ import Navbar from './assets/page/Navbar'
 import About from './assets/page/About'
 import Experience from './assets/page/Experience'
 import Education from './assets/page/Education'
+import Project from './assets/page/Project'
 import Footer from './assets/page/Footer'
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
                 <About />
                 <Experience />
                 <Education />
+                <Project />
                 <Footer />
             </div>
         </>

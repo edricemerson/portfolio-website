@@ -38,7 +38,7 @@ const educationImages = [
 
 function Education() {
     return (
-        <div id="education" className="px-16 mt-20">
+        <div id="education" className="scroll-mt-28 px-4 sm:px-8 md:px-16 mt-20">
             <motion.div
                 className="flex w-full flex-row items-center justify-center"
                 initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -47,21 +47,33 @@ function Education() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <div className="flex flex-col items-center text-center">
-                    <div className="text-white font-bold text-2xl">
+                    <div className="text-white font-bold text-xl sm:text-2xl">
                         LEARNING IS ALWAYS
                     </div>
-                    <div className="text-emerald-400 font-bold text-6xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                    <div className="text-emerald-400 font-bold text-4xl sm:text-5xl md:text-6xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                         EDUCATION
                     </div>
                 </div>
             </motion.div>
 
             <div>
-                <div className="mt-10 flex justify-center">
+                <motion.div
+                    className="mt-10 flex justify-center"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     <HoverExpand_001 images={educationImages} />
-                </div>
-                <div className="mt-10 w-4xl mx-auto">
-                    <div className="flex justify-between text-sm font-bold uppercase tracking-widest text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                </motion.div>
+                <motion.div
+                    className="mt-10 w-full max-w-4xl mx-auto px-2"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+                >
+                    <div className="flex justify-between text-xs sm:text-sm font-bold uppercase tracking-widest text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                         <div>
                             Past
                         </div>
@@ -70,7 +82,7 @@ function Education() {
                         </div>
                     </div>
                     <div className="mt-2 h-1 w-full rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.6)]" />
-                </div>
+                </motion.div>
             </div>
         </div>
     )

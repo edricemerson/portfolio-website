@@ -32,7 +32,7 @@ const HoverExpand_001 = ({
         duration: 0.3,
         delay: 0.5,
       }}
-      className={cn("relative w-full px-5", className)}
+      className={cn("relative w-full px-2 sm:px-5", className)}
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -40,15 +40,15 @@ const HoverExpand_001 = ({
         transition={{ duration: 0.3 }}
         className="w-full"
       >
-        <div className="flex w-full items-center justify-center gap-1">
+        <div className="flex w-full items-center justify-center gap-1 overflow-x-auto">
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="relative cursor-pointer overflow-hidden rounded-3xl"
-              initial={{ width: "2.5rem", height: "20rem" }}
+              className="relative shrink-0 cursor-pointer overflow-hidden rounded-2xl sm:rounded-3xl"
+              initial={{ width: "1.75rem", height: "12rem" }}
               animate={{
-                width: activeImage === index ? "34rem" : "5rem",
-                height: activeImage === index ? "24rem" : "24rem",
+                width: activeImage === index ? "clamp(10rem, 60vw, 34rem)" : "clamp(1.75rem, 8vw, 5rem)",
+                height: activeImage === index ? "clamp(14rem, 55vw, 24rem)" : "clamp(12rem, 55vw, 24rem)",
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               onClick={() => setActiveImage(index)}
@@ -70,14 +70,14 @@ const HoverExpand_001 = ({
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute flex h-full w-full flex-col items-center justify-center gap-2 p-5 text-center"
+                    className="absolute flex h-full w-full flex-col items-center justify-center gap-2 p-3 text-center sm:p-5"
                   >
-                    <span className="text-sm font-bold uppercase tracking-widest text-emerald-400">
+                    <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 sm:text-sm">
                       {image.period}
                     </span>
-                    <p className="text-3xl font-bold text-white">{image.title}</p>
+                    <p className="text-xl font-bold text-white sm:text-3xl">{image.title}</p>
                     {image.detail && (
-                      <p className="text-lg text-white/70">{image.detail}</p>
+                      <p className="text-sm text-white/70 sm:text-lg">{image.detail}</p>
                     )}
                   </motion.div>
                 )}

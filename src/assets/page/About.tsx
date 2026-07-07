@@ -72,26 +72,26 @@ function About() {
     const [showCard, setShowCard] = useState(false)
 
     return (
-        <div id="about" className="px-14">
-            <div className="mx-6 flex items-center mt-9 h-20">
-                <div className="flex flex-1 items-center">
+        <div id="about" className="scroll-mt-28 px-4 sm:px-8 md:px-14">
+            <div className="mx-2 flex flex-col items-center gap-2 mt-9 text-center md:mx-6 md:h-20 md:flex-row md:items-center md:gap-0 md:text-left">
+                <div className="flex w-full items-center justify-center md:flex-1 md:justify-start">
                     <TypingAnimation
                         words={["Hi My Name Is Edric Emerson And I Am 22 Years Old"]}
                         typeSpeed={20}
                         deleteSpeed={60}
                         pauseDelay={2000}
-                        className="font-bold text-3xl text-white"
+                        className="font-bold text-xl sm:text-2xl md:text-3xl text-white"
                         onComplete={() => setStep(1)}
                     />
                 </div>
-                <div className="flex flex-1 flex-wrap items-center justify-center gap-2">
+                <div className="flex w-full flex-wrap items-center justify-center gap-2 md:flex-1">
                     {step >= 1 && (
                         <TypingAnimation
                             words={["I Lived And Based On"]}
                             typeSpeed={20}
                             deleteSpeed={60}
                             pauseDelay={2000}
-                            className="font-bold text-3xl text-white"
+                            className="font-bold text-xl sm:text-2xl md:text-3xl text-white"
                         />
                     )}
                     {step >= 1 && (
@@ -101,7 +101,7 @@ function About() {
                             deleteSpeed={60}
                             pauseDelay={2000}
                             delay={500}
-                            className="font-bold text-3xl bg-clip-text text-transparent bg-size-[200%_auto]"
+                            className="font-bold text-xl sm:text-2xl md:text-3xl bg-clip-text text-transparent bg-size-[200%_auto]"
                             style={{
                                 backgroundImage: "linear-gradient(135deg, #FF0000, #FFFFFF, #FF0000)",
                             }}
@@ -109,14 +109,14 @@ function About() {
                         />
                     )}
                 </div>
-                <div className="flex flex-1 items-center">
+                <div className="flex w-full items-center justify-center md:flex-1 md:justify-end">
                     {step >= 2 && (
                         <TypingAnimation
                             words={["Focused in Doing Frontend and Backend in websites"]}
                             typeSpeed={20}
                             deleteSpeed={60}
                             pauseDelay={2000}
-                            className="font-bold text-3xl text-white text-end"
+                            className="font-bold text-xl sm:text-2xl md:text-3xl text-white text-center md:text-end"
                             onComplete={() => setShowCard(true)}
                         />
                     )}
@@ -127,7 +127,7 @@ function About() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={showCard ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
                 transition={{ type: "spring", stiffness: 120, damping: 20 }}
-                className={cn(LIQUID_GLASS, "flex items-stretch gap-8 mx-6 mt-6 p-5")}
+                className={cn(LIQUID_GLASS, "flex flex-col items-center gap-6 mx-2 mt-6 p-5 md:mx-6 md:flex-row md:items-stretch md:gap-8")}
             >
                 <div className="flex shrink-0 items-center justify-center">
                     <img
@@ -135,7 +135,7 @@ function About() {
                         className="w-40 shrink-0 rounded-xl border border-white/25 object-cover shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
                     />
                 </div>
-                <div className="flex flex-col items-center justify-center gap-2 max-w-xl text-lg leading-relaxed text-center text-white/90">
+                <div className="flex flex-col items-center justify-center gap-2 max-w-xl text-base sm:text-lg leading-relaxed text-center text-white/90">
                     <p>
                         I enjoy turning ideas into clean, functional web applications, from crafting
                         responsive, user-friendly interfaces to building the APIs and databases that
@@ -176,7 +176,7 @@ function About() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={showCard ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
                 transition={{ type: "spring", stiffness: 120, damping: 20, delay: 0.15 }}
-                className="flex flex-col items-center gap-4 mx-6 mt-6 p-6"
+                className="flex flex-col items-center gap-4 mx-2 mt-6 p-6 md:mx-6"
             >
                 <LogoCarousel columnCount={6} />
             </motion.div>

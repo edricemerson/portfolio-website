@@ -6,10 +6,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+    scroll-behavior: smooth;
+}
+
 html, body, #root {
     height: 100%;
     margin: 0;
     background: #000000;
+    overflow-x: hidden;
 }
 
 @theme inline {

@@ -39,13 +39,16 @@ function TooltipTrigger({ ...props }: TooltipTriggerProps) {
 }
 
 type TooltipPanelProps = TooltipPositionerPrimitiveProps &
-  TooltipPopupPrimitiveProps;
+  TooltipPopupPrimitiveProps & {
+    showArrow?: boolean;
+  };
 
 function TooltipPanel({
   className,
   sideOffset = 4,
   children,
   style,
+  showArrow = true,
   ...props
 }: TooltipPanelProps) {
   return (
@@ -63,7 +66,9 @@ function TooltipPanel({
           style={style}
         >
           {children}
-          <TooltipArrowPrimitive className="z-50 size-2.5 rotate-45 rounded-xs border border-white/15 bg-neutral-900/90 fill-neutral-900/90 data-[side='bottom']:-top-1 data-[side='right']:-left-1 data-[side='left']:-right-1 data-[side='inline-start']:-right-1 data-[side='inline-end']:-left-1" />
+          {showArrow && (
+            <TooltipArrowPrimitive className="z-50 size-2.5 rotate-45 rounded-xs border border-white/15 bg-neutral-900/90 fill-neutral-900/90 data-[side='bottom']:-top-1 data-[side='right']:-left-1 data-[side='left']:-right-1 data-[side='inline-start']:-right-1 data-[side='inline-end']:-left-1" />
+          )}
         </TooltipPopupPrimitive>
       </TooltipPositionerPrimitive>
     </TooltipPortalPrimitive>

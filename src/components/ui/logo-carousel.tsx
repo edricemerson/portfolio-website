@@ -246,7 +246,7 @@ function LogoCarousel({ columnCount = 2 }: { columnCount?: number }) {
             />
           }
         >
-          <div className="flex space-x-4">
+          <div className="flex max-w-full gap-3 overflow-x-auto px-1 sm:gap-4">
             {logoSets.map((logos, index) => (
               <LogoColumn
                 key={index}
