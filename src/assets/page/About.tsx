@@ -73,7 +73,7 @@ function About() {
 
     return (
         <div id="about" className="scroll-mt-28 px-4 sm:px-8 md:px-14">
-            <div className="mx-2 flex flex-col items-center gap-2 mt-9 text-center md:mx-6 md:h-20 md:flex-row md:items-center md:gap-0 md:text-left">
+            <div className="mx-2 flex flex-col items-center gap-8 mt-9 text-center md:mx-6 md:h-20 md:flex-row md:items-center md:gap-0 md:text-left">
                 <div className="flex w-full items-center justify-center md:flex-1 md:justify-start">
                     <TypingAnimation
                         words={["Hi My Name Is Edric Emerson And I Am 22 Years Old"]}
