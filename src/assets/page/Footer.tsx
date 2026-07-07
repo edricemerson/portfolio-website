@@ -1,3 +1,4 @@
+import { SiInstagram } from "react-icons/si"
 import { LIQUID_GLASS } from "@/lib/styles"
 import { cn } from "@/lib/utils"
 import WA from "../photo/whatsapp.svg"
@@ -51,9 +52,9 @@ function Footer() {
                     <div>
                         <div className={footerLabel + " mt-4"}>SOCIAL MEDIA</div>
                         <div className="flex flex-row mt-2 gap-2">
-                            <a href="https://www.tiktok.com/@maju_sukses_teknik?_r=1&_t=ZS-97WpVIwLWEi" target="_blank" rel="noreferrer">
-                                <img className="w-9 h-9 p-1 mr-3 rounded-xl border-2 transition
-                                duration-300 ease-in-out bg-black border-white/20 hover:bg-neutral-900"
+                            <a href="https://www.instagram.com/ed12ic?igsh=Mm5hemt6OTd5Ynpp" target="_blank" rel="noreferrer">
+                                <SiInstagram className="w-9 h-9 p-1.5 mr-3 rounded-xl border-2 transition
+                                duration-300 ease-in-out bg-black text-white border-white/20 hover:bg-neutral-900"
                                 />
                             </a>
                         </div>
