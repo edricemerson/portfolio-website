@@ -4,12 +4,7 @@ import { Dialog, DropdownMenu } from "radix-ui"
 import { ChevronDown, Check } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { LIQUID_GLASS } from "@/lib/styles"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    type CarouselApi,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi,} from "@/components/ui/carousel"
 import { Tooltip, TooltipTrigger, TooltipPanel } from "@/components/animate-ui/components/base/tooltip"
 import { GithubLanguageBar } from "@/components/ui/github-language-bar"
 import mst1 from "../photo/projectPhoto/mst/mst1.png"
@@ -40,6 +35,20 @@ const eduImages = loadProjectImages(
 
 const hotelApiImages = loadProjectImages(
     import.meta.glob("../photo/projectPhoto/hotel-api/*.png", {
+        eager: true,
+        import: "default",
+    }) as Record<string, string>
+)
+
+const edricImages = loadProjectImages(
+    import.meta.glob("../photo/projectPhoto/edric/*.png", {
+        eager: true,
+        import: "default",
+    }) as Record<string, string>
+)
+
+const nrtProImages = loadProjectImages(
+    import.meta.glob("../photo/projectPhoto/nrt-pro/*.png", {
         eager: true,
         import: "default",
     }) as Record<string, string>
@@ -98,6 +107,22 @@ const projects: ProjectEntry[] = [
         date: "6 March 2026",
         repo: "edricemerson/hotel-api"
     },
+    {
+        src: edricImages,
+        title: "My Website Portfolio",
+        description: "My own website portfolio build using typescript, tailwind, and react libraries from shadcn, magicui and others.",
+        tags: ["Website","Portfolio"],
+        date: "8 July 2026",
+        repo: "edricemerson/portfolio-website"
+    },
+    {
+        src: nrtProImages,
+        title: "NRT PRO Online Shop",
+        description: "A fullstack e-commerce store for an official NRT-PRO & YAMAMAX PRO power tools distributor, with a product catalog, cart, checkout, and a map-based delivery address picker. Includes a hidden admin panel for managing stock, prices, orders, and revenue.",
+        tags: ["Website", "E-Commerce"],
+        date: "6 September 2026",
+        repo: "edricemerson/nrt-pro"
+    }
 ]
 
 type SortOrder = "new-to-old" | "old-to-new"
